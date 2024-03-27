@@ -13,7 +13,7 @@ async function handleUserSignup(req, res) {
   console.log("User Created");
   res.send({
     message: "User Signed up",
-    redirectTo: "http://192.168.37.207:3000/login",
+    redirectTo: "http://192.168.1.14:3000/login",
   });
 }
 
@@ -36,7 +36,7 @@ async function handleUserLogin(req, res) {
     console.log("User Logged in");
     res.send({
       message: "User Logged in",
-      redirectTo: "http://192.168.37.207:3000/",
+      redirectTo: "http://192.168.1.14:3000/",
     });
   }
 }
