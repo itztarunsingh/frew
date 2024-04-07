@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
 
 // create structure
-const userSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true,
-    },
+const profileSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -18,9 +14,18 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    coins : {
+        type: Number,
+    },
+    posts : {
+        type: Array,
+    },
+    tasksDone : {
+        type: Number,
+    }
 
 }, {timestamp: true});
 
-const User = mongoose.model('user', userSchema);
+const Profile = mongoose.model('profiles', profileSchema);
 
-module.exports = User;
+module.exports = Profile;
